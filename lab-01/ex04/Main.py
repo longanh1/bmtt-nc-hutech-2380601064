@@ -28,7 +28,7 @@ while (1 == 1):
         if (qlsv.soluongSinhVien() > 0):
             print("\n3. Xoa sinh vien theo ID")
             ID = int(input("Nhap ID sinh vien can xoa: "))
-            if(qlsv.deleteSinhVien(ID)):
+            if(qlsv.deleteByID(ID)):
                 print("Sinh vien co ID = ", ID, " da duoc xoa!")
         else:
             print("Danh sach sinh vien trong!")
@@ -37,27 +37,27 @@ while (1 == 1):
             print("\n4. Tim kiem sinh vien theo ten")
             name = input("Nhap ten sinh vien can tim kiem: ")
             seachResult = qlsv.findByName(name)
-            qlsv.showListSinhVien(seachResult)
+            qlsv.showSinhVien(seachResult)
         else:
             print("Danh sach sinh vien trong!")
     elif (key == 5):
         if (qlsv.soluongSinhVien() > 0):
             print("\n5. Sap xep sinh vien theo diem TB GPA")
             qlsv.sortByDiemTB()
-            qlsv.showListSinhVien(qlsv.listSinhVien)
+            qlsv.showSinhVien(qlsv.listSinhVien)
         else:
             print("Danh sach sinh vien trong!")
     elif (key == 6):
         if (qlsv.soluongSinhVien() > 0):
             print("\n6. Xap xep sinh vien theo ten chuyen nganh")
             qlsv.sortByMajor()
-            qlsv.showListSinhVien(qlsv.listSinhVien)
+            qlsv.showSinhVien(qlsv.listSinhVien)
         else:
             print("Danh sach sinh vien trong!")
     elif (key == 7):
         if (qlsv.soluongSinhVien() > 0):
             print("\n7. Hien thi danh sach sinh vien")
-            qlsv.showListSinhVien(qlsv.listSinhVien)
+            qlsv.showSinhVien(qlsv.getListSinhVien())
         else:
             print("Danh sach sinh vien trong!")
     elif (key == 0):

@@ -61,3 +61,14 @@ class PlayFairCipher:
                 decrypted_text += matrix[row1][col2] + matrix[row2][col1]
         baro = ""
         
+        for i in range(0, len(decrypted_text)-2, 2):
+            if decrypt_text[i] == decrypted_text[i+2]:
+                baro += decrypted_text[i]
+            else:
+                baro += decrypted_text[i] + decrypted_text[i+1]
+        if decrypted_text[-1] != "X":
+            baro += decrypted_text[-2]
+        else:
+            baro += decrypted_text[-2]
+            baro += decrypted_text[-1]
+        return baro

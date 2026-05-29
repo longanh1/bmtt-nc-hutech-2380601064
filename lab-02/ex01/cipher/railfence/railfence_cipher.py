@@ -2,12 +2,12 @@ class RailfenceCipher:
     def __init__(self):
         pass
     
-    def rail_dence_encrypt(self, plain_text, num_rails):
-        rails = [[] for _ in range(num_rail)]
+    def rail_fence_encrypt(self, plain_text, num_rails):
+        rails = [[] for _ in range(num_rails)]
         rail_index = 0
         direction = 1 #1: down, -1: up
         for char in plain_text:
-            rails = [rails_index].append(char)
+            rails[rail_index].append(char)
             if rail_index == 0:
                 direction = 1
             elif rail_index == num_rails - 1:

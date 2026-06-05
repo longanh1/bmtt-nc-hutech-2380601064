@@ -1,4 +1,4 @@
-from cipher.caesar import ALPHABET
+from ex01.cipher.caesar import ALPHABET
 
 class CaesarCipher:
     def encrypt_text(self, text: str, key: int) -> str:
